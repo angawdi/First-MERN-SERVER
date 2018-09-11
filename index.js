@@ -7,6 +7,12 @@ const path = require('path');
 // Declare app
 const app = express();
 
+// middleware
+app.use(cors());
+
+//get referencce to the models
+const db = require('./models');
+
 // Include controllers
 app.use('/users', require('./controllers/users'));
 
